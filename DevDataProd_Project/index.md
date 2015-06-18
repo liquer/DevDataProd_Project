@@ -14,19 +14,28 @@ knit        : slidify::knit2slides
 ## Why predict?
 
 MPG is the abbreviation of miles per (US) gallon, which is the indicator of the fuel consumption of the cars. 
+
 ### Why do you need the MPG value?
+
 1. Saving money.
 2. For Better environment.
 
 --- .class #id
 
-## Method: Random Forest
+## Building the Model
+
+### Method: Random Forest
 
 We choose the method of random forest to build the predicting model.
 
 Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
 
 Random forests correct for decision trees' habit of overfitting to their training set.(From [Random forest-Wiki](https://en.wikipedia.org/wiki/Random_forest))
+
+
+### Model for Prediction
+
+We train the model, considering that there is interaction between weight and transmission. 
 
 --- .class #id
 
@@ -47,37 +56,6 @@ Random forests correct for decision trees' habit of overfitting to their trainin
 ##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
 ##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
 ##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
-```
-
---- .class #id
-
-## Model for Prediction
-
-We train the model, considering that there is interaction between weight and transmission. The summary of the model is below.
-
-```
-## note: only 2 unique complexity parameters in default grid. Truncating the grid to 2 .
-```
-
-```
-## Random Forest 
-## 
-## 32 samples
-## 10 predictors
-## 
-## No pre-processing
-## Resampling: Bootstrapped (25 reps) 
-## 
-## Summary of sample sizes: 32, 32, 32, 32, 32, 32, ... 
-## 
-## Resampling results across tuning parameters:
-## 
-##   mtry  RMSE      Rsquared   RMSE SD    Rsquared SD
-##   2     3.300292  0.7589410  0.7646694  0.1381001  
-##   3     3.317813  0.7600938  0.7785545  0.1375272  
-## 
-## RMSE was used to select the optimal model using  the smallest value.
-## The final value used for the model was mtry = 2.
 ```
 
 --- .class #id

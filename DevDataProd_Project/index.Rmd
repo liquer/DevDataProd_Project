@@ -14,19 +14,28 @@ knit        : slidify::knit2slides
 ## Why predict?
 
 MPG is the abbreviation of miles per (US) gallon, which is the indicator of the fuel consumption of the cars. 
+
 ### Why do you need the MPG value?
+
 1. Saving money.
 2. For Better environment.
 
 --- .class #id
 
-## Method: Random Forest
+## Building the Model
+
+### Method: Random Forest
 
 We choose the method of random forest to build the predicting model.
 
 Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
 
 Random forests correct for decision trees' habit of overfitting to their training set.(From [Random forest-Wiki](https://en.wikipedia.org/wiki/Random_forest))
+
+
+### Model for Prediction
+
+We train the model, considering that there is interaction between weight and transmission. 
 
 --- .class #id
 
@@ -37,17 +46,6 @@ Random forests correct for decision trees' habit of overfitting to their trainin
 library(datasets)
 data(mtcars)
 str(mtcars)
-```
-
---- .class #id
-
-## Model for Prediction
-
-We train the model, considering that there is interaction between weight and transmission. The summary of the model is below.
-```{r,echo=FALSE}
-library(caret)
-fit <- train(mpg ~ wt * factor(am), data = mtcars)
-fit
 ```
 
 --- .class #id
