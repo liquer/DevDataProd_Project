@@ -62,21 +62,6 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Method: Random Forest</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>We choose the method of random forest to build the predicting model.</p>
-
-<p>Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. </p>
-
-<p>Random forests correct for decision trees&#39; habit of overfitting to their training set.(From <a href="https://en.wikipedia.org/wiki/Random_forest">Random forest-Wiki</a>)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <hgroup>
     <h2>Dataset from R Package: mtcars</h2>
   </hgroup>
   <article data-timings="">
@@ -102,33 +87,20 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Model for Prediction</h2>
+    <h2>Building the Model</h2>
   </hgroup>
   <article data-timings="">
-    <p>We train the model, considering that there is interaction between weight and transmission. The summary of the model is below.</p>
+    <h3>Method: Random Forest</h3>
 
-<pre><code>## note: only 2 unique complexity parameters in default grid. Truncating the grid to 2 .
-</code></pre>
+<p>We choose the method of random forest to build the predicting model.</p>
 
-<pre><code>## Random Forest 
-## 
-## 32 samples
-## 10 predictors
-## 
-## No pre-processing
-## Resampling: Bootstrapped (25 reps) 
-## 
-## Summary of sample sizes: 32, 32, 32, 32, 32, 32, ... 
-## 
-## Resampling results across tuning parameters:
-## 
-##   mtry  RMSE      Rsquared   RMSE SD    Rsquared SD
-##   2     3.300292  0.7589410  0.7646694  0.1381001  
-##   3     3.317813  0.7600938  0.7785545  0.1375272  
-## 
-## RMSE was used to select the optimal model using  the smallest value.
-## The final value used for the model was mtry = 2.
-</code></pre>
+<p>Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. </p>
+
+<p>Random forests correct for decision trees&#39; habit of overfitting to their training set.(From <a href="https://en.wikipedia.org/wiki/Random_forest">Random forest-Wiki</a>)</p>
+
+<h3>Model: Interaction between weight and transmission</h3>
+
+<p>We train the model, considering that there is interaction between weight and transmission. </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -166,32 +138,26 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Method: Random Forest'>
+        data-slide=2 title='Dataset from R Package: mtcars'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Dataset from R Package: mtcars'>
+        data-slide=3 title='Building the Model'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Model for Prediction'>
+        data-slide=4 title='Using the App'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Using the App'>
+        data-slide=5 title='NA'>
          5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
-         6
       </a>
     </li>
   </ul>

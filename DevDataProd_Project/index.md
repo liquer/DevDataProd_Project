@@ -20,16 +20,6 @@ MPG is the abbreviation of miles per (US) gallon, which is the indicator of the 
 
 --- .class #id
 
-## Method: Random Forest
-
-We choose the method of random forest to build the predicting model.
-
-Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
-
-Random forests correct for decision trees' habit of overfitting to their training set.(From [Random forest-Wiki](https://en.wikipedia.org/wiki/Random_forest))
-
---- .class #id
-
 ## Dataset from R Package: mtcars
 
 ```mtcars``` is a classical dataset provided in the R package {datasets}. It contains data of different kinds of cars and we can train a model with the data conveniently. Particularly, in mtcars, "wt" means weight, and "am" means transmission(auto-matic/manual), which are the two main predictors in the model.
@@ -51,34 +41,19 @@ Random forests correct for decision trees' habit of overfitting to their trainin
 
 --- .class #id
 
-## Model for Prediction
+## Building the Model
 
-We train the model, considering that there is interaction between weight and transmission. The summary of the model is below.
+### Method: Random Forest
 
-```
-## note: only 2 unique complexity parameters in default grid. Truncating the grid to 2 .
-```
+We choose the method of random forest to build the predicting model.
 
-```
-## Random Forest 
-## 
-## 32 samples
-## 10 predictors
-## 
-## No pre-processing
-## Resampling: Bootstrapped (25 reps) 
-## 
-## Summary of sample sizes: 32, 32, 32, 32, 32, 32, ... 
-## 
-## Resampling results across tuning parameters:
-## 
-##   mtry  RMSE      Rsquared   RMSE SD    Rsquared SD
-##   2     3.300292  0.7589410  0.7646694  0.1381001  
-##   3     3.317813  0.7600938  0.7785545  0.1375272  
-## 
-## RMSE was used to select the optimal model using  the smallest value.
-## The final value used for the model was mtry = 2.
-```
+Random forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
+
+Random forests correct for decision trees' habit of overfitting to their training set.(From [Random forest-Wiki](https://en.wikipedia.org/wiki/Random_forest))
+
+### Model: Interaction between weight and transmission
+
+We train the model, considering that there is interaction between weight and transmission. 
 
 --- .class #id
 
